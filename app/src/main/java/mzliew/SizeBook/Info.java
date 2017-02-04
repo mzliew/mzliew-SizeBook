@@ -32,17 +32,21 @@ public class Info extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
         loadFromFile();
-        EditText EditName = (EditText) findViewById(R.id.names);
-        EditText EditDate = (EditText) findViewById(R.id.date);
-        EditText EditNeck = (EditText) findViewById(R.id.neck);
-        EditText EditBust = (EditText) findViewById(R.id.bust);
-        EditText EditChest = (EditText) findViewById(R.id.chest);
-        EditText EditWaist = (EditText) findViewById(R.id.waist);
-        EditText EditHip = (EditText) findViewById(R.id.hip);
-        EditText EditInseam = (EditText) findViewById(R.id.inseam);
-        EditText EditComment = (EditText) findViewById(R.id.comment);
         Bundle extra = getIntent().getExtras();
         int position = extra.getInt("person");
+        EditData(position);
+    }
+
+    public void EditData(final int position) {
+        final EditText EditName = (EditText) findViewById(R.id.names);
+        final EditText EditDate = (EditText) findViewById(R.id.date);
+        final EditText EditNeck = (EditText) findViewById(R.id.neck);
+        final EditText EditBust = (EditText) findViewById(R.id.bust);
+        final EditText EditChest = (EditText) findViewById(R.id.chest);
+        final EditText EditWaist = (EditText) findViewById(R.id.waist);
+        final EditText EditHip = (EditText) findViewById(R.id.hip);
+        final EditText EditInseam = (EditText) findViewById(R.id.inseam);
+        final EditText EditComment = (EditText) findViewById(R.id.comment);
         final SizeInfo sizeinfo = personList.get(position);
         if (sizeinfo.getName() != null) {
             EditName.setText(sizeinfo.getName());
@@ -71,11 +75,7 @@ public class Info extends AppCompatActivity {
         if (sizeinfo.getComment() != null) {
             EditComment.setText(sizeinfo.getComment());
         }
-        EditData(position);
-    }
 
-    public void EditData(final int position) {
-        final EditText EditName = (EditText) findViewById(R.id.names);
         if (EditName.getText().toString().trim().equals(""))
             EditName.setError("Name is required.");
         else {
@@ -83,16 +83,8 @@ public class Info extends AppCompatActivity {
             done.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    EditText EditDate = (EditText) findViewById(R.id.date);
-                    EditText EditNeck = (EditText) findViewById(R.id.neck);
-                    EditText EditBust = (EditText) findViewById(R.id.bust);
-                    EditText EditChest = (EditText) findViewById(R.id.chest);
-                    EditText EditWaist = (EditText) findViewById(R.id.waist);
-                    EditText EditHip = (EditText) findViewById(R.id.hip);
-                    EditText EditInseam = (EditText) findViewById(R.id.inseam);
-                    EditText EditComment = (EditText) findViewById(R.id.comment);
+
                     loadFromFile();
-                    final SizeInfo sizeinfo = personList.get(position);
                     if (!EditName.getText().toString().trim().equals("")) {
                         String addName = EditName.getText().toString();
                         sizeinfo.setName(addName);

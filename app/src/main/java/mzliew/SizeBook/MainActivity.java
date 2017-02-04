@@ -33,9 +33,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ListView PersonView = (ListView)findViewById(R.id.PersonList);
         loadFromFile();
         showCount(personList);
+        showList();
+    }
+    private void showList(){
+        ListView PersonView = (ListView)findViewById(R.id.PersonList);
         final ArrayAdapter<SizeInfo> listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, personList);
         PersonView.setAdapter(listAdapter);
         PersonView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
@@ -67,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     private void showCount(ArrayList personList) {
         TextView count = (TextView)findViewById(R.id.count);
         if(personList.isEmpty()) {
