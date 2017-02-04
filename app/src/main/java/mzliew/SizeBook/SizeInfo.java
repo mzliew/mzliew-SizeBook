@@ -1,6 +1,8 @@
 package mzliew.SizeBook;
 
 public class SizeInfo{
+    // Taken from https://www.mkyong.com/java/how-do-convert-java-object-to-from-json-format-gson-api/
+    // 2017-01-29 15:43:15
     private String name;
     private String date;
     private String neck;
@@ -83,7 +85,8 @@ public class SizeInfo{
         this.comment = comment;
     }
 
-    //Taken from http://stackoverflow.com/questions/6123214/assign-object-property-to-listview
+    // Taken from http://stackoverflow.com/questions/6123214/assign-object-property-to-listview
+    // 2017-01-25 20:01:35
     public String toString(){
             return name;
     }

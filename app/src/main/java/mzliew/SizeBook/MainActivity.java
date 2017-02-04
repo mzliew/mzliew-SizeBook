@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         ListView PersonView = (ListView)findViewById(R.id.PersonList);
         final ArrayAdapter<SizeInfo> listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, personList);
         PersonView.setAdapter(listAdapter);
+        // Taken from http://stackoverflow.com/questions/2115758/how-do-i-display-an-alert-dialog-on-android
+        // 2017-01-28 16:21:55
         PersonView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
@@ -87,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
             BufferedReader in = new BufferedReader(new InputStreamReader(fis));
             Gson gson = new Gson();
             // Taken from http://stackoverflow.com/questions/12384064/gson-convert-from-json-to-a-typed-arraylistt
+            // 2017-01-28 14:54:02
             personList = gson.fromJson(in, new TypeToken<ArrayList<SizeInfo>>(){}.getType());
             fis.close();
         }catch (FileNotFoundException e){

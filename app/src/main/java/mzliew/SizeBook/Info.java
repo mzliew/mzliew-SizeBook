@@ -28,7 +28,6 @@ public class Info extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // Taken from https://www.mkyong.com/java/how-do-convert-java-object-to-from-json-format-gson-api/
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
         loadFromFile();
@@ -135,6 +134,7 @@ public class Info extends AppCompatActivity {
             BufferedReader in = new BufferedReader(new InputStreamReader(fis));
             Gson gson = new Gson();
             // Taken from http://stackoverflow.com/questions/12384064/gson-convert-from-json-to-a-typed-arraylistt
+            // 2017-01-28 14:54:02
             personList = gson.fromJson(in, new TypeToken<ArrayList<SizeInfo>>(){}.getType());
             fis.close();
         }catch (FileNotFoundException e){
