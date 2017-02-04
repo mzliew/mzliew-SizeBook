@@ -25,43 +25,43 @@
         <EditText android:id="@+id/date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Date"
+            android:hint="Date (yyyy-mm-dd format)"
             android:inputType = "date"/>
 
         <EditText android:id="@+id/neck"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Neck"
+            android:hint="Neck (circumference in inches)"
             android:inputType = "numberDecimal"/>
 
         <EditText android:id="@+id/bust"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Bust"
+            android:hint="Bust (circumference in inches)"
             android:inputType = "numberDecimal"/>
 
         <EditText android:id="@+id/chest"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Chest"
+            android:hint="Chest (circumference in inches)"
             android:inputType = "numberDecimal"/>
 
         <EditText android:id="@+id/waist"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Waist"
+            android:hint="Waist (circumference in inches)"
             android:inputType = "numberDecimal"/>
 
         <EditText android:id="@+id/hip"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Hip"
+            android:hint="Hip (circumference in inches)"
             android:inputType = "numberDecimal"/>
 
         <EditText android:id="@+id/inseam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Inseam"
+            android:hint="Inseam (length in inches)"
             android:inputType = "numberDecimal"/>
 
         <EditText android:id="@+id/comment"
