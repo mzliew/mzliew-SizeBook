@@ -20,7 +20,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
-
+/*
+    Info activity shows selected person's size information.
+    - gets the position of the personList to get their SizeInfo
+    - puts the information onto their respective categories
+    - any changes made in their information will be saved once they click the "Done Editing" button
+ */
 
 public class Info extends AppCompatActivity {
     static ArrayList<SizeInfo> personList = new ArrayList<>();
@@ -83,7 +88,6 @@ public class Info extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
 
-                    loadFromFile();
                     if (!EditName.getText().toString().trim().equals("")) {
                         String addName = EditName.getText().toString();
                         sizeinfo.setName(addName);
@@ -112,6 +116,7 @@ public class Info extends AppCompatActivity {
                         String addHip = EditHip.getText().toString();
                         sizeinfo.setHip(addHip);
                     }
+
                     if (!EditInseam.getText().toString().trim().equals("")) {
                         String addInseam = EditInseam.getText().toString();
                         sizeinfo.setInseam(addInseam);

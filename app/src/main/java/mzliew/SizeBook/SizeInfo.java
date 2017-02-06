@@ -1,5 +1,7 @@
 package mzliew.SizeBook;
-
+/*
+    A POJO that contains getters and setters of a person's sizing information.
+ */
 public class SizeInfo{
     // Taken from https://www.mkyong.com/java/how-do-convert-java-object-to-from-json-format-gson-api/
     // 2017-01-29 15:43:15

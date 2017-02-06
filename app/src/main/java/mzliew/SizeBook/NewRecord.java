@@ -14,7 +14,13 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
-
+/*
+    NewRecord allows the user to enter their sizing information
+    and saves it in the file.
+    - Makes sure that person's name is required in each record
+    - Only allows numeric input for the respective categories of sizing
+    - Saves in file after user is done adding their information.
+ */
 public class NewRecord extends AppCompatActivity {
     static ArrayList<SizeInfo> personList = new ArrayList<>();
     private static final String FILENAME = "file.sav";

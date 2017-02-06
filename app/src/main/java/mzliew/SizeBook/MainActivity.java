@@ -25,7 +25,14 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 
-
+/*
+    MainActivity is where the app starts and shows the list of people who we keep track
+    of their sizes.
+    - Option to add a new record via the "Add Record" button
+    - Loads from a save file containing GSON of each record
+    - Maintains a count of the individuals entered
+    - Allows deletion and editing of records by long clicking a record.
+ */
 public class MainActivity extends AppCompatActivity {
     ArrayList<SizeInfo> personList = new ArrayList<>();
     private static final String FILENAME = "file.sav";
